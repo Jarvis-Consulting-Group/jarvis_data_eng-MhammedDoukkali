@@ -5,7 +5,7 @@ cmd=$1
 db_username=$2
 db_password=$3
 
-sudo systemctl status docker || systemctl
+sudo systemctl status docker || systemctl start docker
 
 docker container inspect jrvs-psql
 container_status=$?
@@ -25,22 +25,16 @@ case $cmd in
 
 	docker volume create --name jrvs-psql
 	
-	docker run --name jrvs-psql \
-	     -e POSTGRES_PASSWORD=$PASSWORD \ 
-	     -e POSTGRES_USER=${PG_USER} \
-	     -d
-	     -v pgdata:/var/lib/postgresql/data \
-	     -p 5432:5432 \
-	     postgres
+	docker run --name jrvs-psql -e POSTGRES_PASSWORD=$PASSWORD -e POSTGRES_USER=${PG_USER} -d -v pgdata:/var/lib/postgresql/data -p 5432:5432 postgres:9.6-alpine
 	exit $?
 	;;
 
 	start|stop)
 
-	if [ $container_status=exited -f name=jrvs-psql ]; then
+	if [ $container_status -ne 0  ]; then
 	  echo 'Container has not been created'
 	  exit 1
-
+  fi
 	docker container $cmd jrvs-psql
 	exit $?
 	;;
