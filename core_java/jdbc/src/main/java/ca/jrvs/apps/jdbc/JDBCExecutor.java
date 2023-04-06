@@ -22,9 +22,9 @@ public class JDBCExecutor {
                 "hplussport", "postgres", "password");
         try {
             Connection connection = dcm.getConnection();
-            OrderDAO orderDAO = new OrderDAO(connection);
-            List<Order> orders = orderDAO.getOrdersForCustomer(789);
-            orders.forEach(System.out::println);
+            CustomerDAO customerDAO = new CustomerDAO(connection);
+            customerDAO.findAllSorted(20).forEach(System.out::println);
+
         } catch (SQLException e) {
             e.printStackTrace();
 //            jdbcExecutor.logger.error(e.getMessage());
