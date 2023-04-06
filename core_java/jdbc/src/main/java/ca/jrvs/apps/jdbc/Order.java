@@ -10,7 +10,7 @@ public class Order implements DataTransferObject {
 
     private long id;
     private Date creationDate;
-    private double totalDue;
+    private BigDecimal totalDue;
     private String status;
     private long customerId;
     private String customerFirstName;
@@ -38,7 +38,7 @@ public class Order implements DataTransferObject {
         this.creationDate = creationDate;
     }
 
-    public double getTotalDue() {
+    public BigDecimal getTotalDue() {
         return totalDue;
     }
 

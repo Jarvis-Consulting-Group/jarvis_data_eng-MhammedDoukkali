@@ -9,6 +9,8 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.List;
+
 public class JDBCExecutor {
 
     final Logger logger = LoggerFactory.getLogger(JDBCExecutor.class);
@@ -20,28 +22,12 @@ public class JDBCExecutor {
                 "hplussport", "postgres", "password");
         try {
             Connection connection = dcm.getConnection();
-            CustomerDAO customerDAO = new CustomerDAO(connection);
-            Customer customer = new Customer();
-            customer.setFirstName("John");
-            customer.setLastName("Adams");
-            customer.setEmail("jadams.wh.gov");
-            customer.setAddress("1234 main street");
-            customer.setCity("Arlington");
-            customer.setState("Va");
-            customer.setPhone("514 666 888");
-            customer.setZipCode("02345");
-
-            Customer dbCustomer = customerDAO.create(customer);
-            System.out.println(dbCustomer);
-            dbCustomer = customerDAO.findById(dbCustomer.getId());
-            System.out.println(dbCustomer);
-            dbCustomer.setEmail("john.adams@wh.gov");
-            dbCustomer = customerDAO.update(dbCustomer);
-            System.out.println(dbCustomer);
-//            customerDAO.delete(dbCustomer.getId());
-
+            OrderDAO orderDAO = new OrderDAO(connection);
+            List<Order> orders = orderDAO.getOrdersForCustomer(789);
+            orders.forEach(System.out::println);
         } catch (SQLException e) {
-            jdbcExecutor.logger.error(e.getMessage());
+            e.printStackTrace();
+//            jdbcExecutor.logger.error(e.getMessage());
         }
 
     }
