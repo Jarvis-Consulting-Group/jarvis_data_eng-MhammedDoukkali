@@ -5,7 +5,7 @@ This Java program uses the JDBC API to establish a connection with a PostgreSQL 
 # Implementaiton
 ## ER Diagram
 
-![](/assets/jdbc_er.png)
+![jdbc_er.png](assets%2Fjdbc_er.png)
 
 
 ## Design Patterns
