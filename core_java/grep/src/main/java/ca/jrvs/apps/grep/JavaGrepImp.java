@@ -88,13 +88,12 @@ public class JavaGrepImp implements JavaGrep {
             while((line = bufferedReader.readLine()) != null) {
                 //adding each line to the List
                 allLines.add(line);
-//                logger.info(line);
                 }
-
             bufferedReader.close();
             } catch (IOException e) {
             logger.error("An error occurred while reading the file", e.getMessage());
-            }
+            throw new IllegalArgumentException();
+        }
         return allLines;
     }
 
@@ -123,7 +122,7 @@ public class JavaGrepImp implements JavaGrep {
                 bufferedWriter.newLine();
             }
             bufferedWriter.close();
-//            logger.info("Data has been written to the file");
+
         } catch (IOException e) {
             logger.error("An error occurred while writing to the file: " + e.getMessage());
         }
