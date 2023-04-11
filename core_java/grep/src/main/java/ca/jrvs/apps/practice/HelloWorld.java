@@ -1,4 +1,4 @@
-package ca.jrvs.apps.grep;
+package ca.jrvs.apps.practice;
 
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
