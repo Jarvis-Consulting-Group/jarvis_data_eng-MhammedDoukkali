@@ -53,14 +53,16 @@ public class JavaGrepLambdaImp extends JavaGrepImp{
 
     @Override
     public List<File> listFiles(String rootDir)  {
-        try (Stream<Path> fileList = Files.walk(Paths.get(rootDir))) {
-            return fileList
-                    .filter(Files::isRegularFile)
-                    .map(Path::toFile)
-                    .collect(Collectors.toList());
-        } catch (IOException e) {
-            logger.error("An error occurred while writing to the file: " + e.getMessage());
-            return Collections.emptyList();
+        List<File> fileList = new ArrayList<>();
+        //Creating a File object for directory
+        File path = new File(rootDir);
+        //list of all files
+        File[] files = path.listFiles();
+        for( int i = 0 ; i < files.length; i++) {
+            if (files[i].isFile()) {
+                fileList.add(files[i]);
+            }
         }
+        return fileList;
     }
 }

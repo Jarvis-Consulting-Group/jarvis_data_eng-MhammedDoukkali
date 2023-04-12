@@ -1,15 +1,22 @@
 package ca.jrvs.apps.grep;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.apache.log4j.BasicConfigurator;
+
 
 
 
@@ -40,6 +47,10 @@ public class JavaGrepImp implements JavaGrep {
         javaGrepImp.setRootPath(args[1]);
         javaGrepImp.setOutFile(args[2]);
 
+//        javaGrepImp.setRegex(".*Romeo.*Juliet.*");
+//        javaGrepImp.setRootPath("./data");
+//        javaGrepImp.setOutFile("./out/grep.txt");
+
         try {
             javaGrepImp.process();
         } catch (Exception e) {
@@ -64,43 +75,42 @@ public class JavaGrepImp implements JavaGrep {
     @Override
     public List<File> listFiles(String rootDir) {
 
-        List<File> fileList = new ArrayList<>();
-        //Creating a File object for directory
-        File path = new File(rootDir);
-        //list of all files
-        File[] files = path.listFiles();
-        for( int i = 0 ; i < files.length; i++) {
-            if (files[i].isFile()) {
-                fileList.add(files[i]);
-            }
+        try (Stream<Path> fileList = Files.walk(Paths.get(rootDir))) {
+            return fileList
+                    .filter(Files::isRegularFile)
+                    .map(Path::toFile)
+                    .collect(Collectors.toList());
+        } catch (IOException e) {
+            logger.error("An error occurred while writing to the file: " + e.getMessage());
+            return Collections.emptyList();
         }
-        return fileList;
+
     }
 
     @Override
     public List<String> readLines(File inputFile) {
         List<String> allLines = new ArrayList<>();
-        try {
             //Wrap FileReader in BufferedReader to read and store in a buffer
-            BufferedReader bufferedReader = new BufferedReader(new FileReader(inputFile));
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(inputFile))){
+
             //returning lines as string
             String line;
             while((line = bufferedReader.readLine()) != null) {
                 //adding each line to the List
                 allLines.add(line);
                 }
-            bufferedReader.close();
+            return allLines;
             } catch (IOException e) {
-            logger.error("An error occurred while reading the file", e.getMessage());
+            logger.error("An error occurred while reading the file", e);
             throw new IllegalArgumentException();
         }
-        return allLines;
+
     }
 
 
     @Override
     public boolean containsPattern(String line) {
-        Pattern pattern = Pattern.compile("regex") ;
+        Pattern pattern = Pattern.compile(getRegex()) ;
         Matcher matcher = pattern.matcher(line);
         return matcher.find();
     }
@@ -111,7 +121,7 @@ public class JavaGrepImp implements JavaGrep {
 
         try {
             //Create a FileOutputStream to write bytes to the file
-            FileOutputStream fileOutputStream = new FileOutputStream("output");
+            FileOutputStream fileOutputStream = new FileOutputStream(getOutFile());
             //Create an OutputStream to write characters data to the FileOutputStream
             OutputStreamWriter outputStream = new OutputStreamWriter(fileOutputStream);
             //Create a BufferedWriter to write data to the outputStreamWriter
