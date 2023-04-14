@@ -27,13 +27,16 @@ public class TwitterApiTest {
         //create an HTTP GET request
         String status = "today is a good day";
         PercentEscaper percentEscaper = new PercentEscaper("", false);
-        HttpPost request = new HttpPost("https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=DanielMiessler" + percentEscaper.escape(status));
+        HttpPost request = new HttpPost(
+                "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=DanielMiessler"
+                        + percentEscaper.escape(status));
 
         //sign the request (add headers)
         consumer.sign(request);
 
         System.out.println("Http Request Headers:");
-        Arrays.stream(request.getAllHeaders()).forEach(System.out::println);
+        Arrays.stream(request.getAllHeaders())
+                .forEach(System.out::println);
 
         //send the request
         HttpClient httpClient = HttpClientBuilder.create().build();
