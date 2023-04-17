@@ -73,7 +73,7 @@ public class TwitterHttpHelper implements HttpHelper {
     @Override
     public HttpResponse httpGet(URI uri) {
         try {
-            return executeHttpRequest(HttpMethod.GET, uri, null)
+            return executeHttpRequest(HttpMethod.GET, uri, null);
         } catch (OAuthException | IOException e) {
             throw  new RuntimeException(e);
         }
