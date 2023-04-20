@@ -1,15 +1,20 @@
 package ca.jrvs.apps.twitter.dao;
 
 import ca.jrvs.apps.twitter.dao.helper.HttpHelper;
+import ca.jrvs.apps.twitter.example.JsonParser;
 import ca.jrvs.apps.twitter.model.Tweet;
 import com.google.gdata.util.common.base.PercentEscaper;
 import org.apache.http.HttpResponse;
+import org.apache.http.util.EntityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URI;
 import java.net.URISyntaxException;
 
+@Repository
 public class TwitterDao implements CrdDao<Tweet, String> {
 
     //URI constants
@@ -47,17 +52,65 @@ public class TwitterDao implements CrdDao<Tweet, String> {
         
     }
 
+    @Override
+    public Tweet findById(String s) {
+
+        return null;
+    }
+
+    @Override
+    public Tweet deleteById(String s) {
+
+        return null;
+    }
+
     private String getCreateUri(Tweet tweet) {
     String uriString = API_BASE_URI + POST_PATH + QUERY_SYM;
 
     PercentEscaper percentEscaper = new PercentEscaper("", false);
 
-        uriString+= "status" + EQUAL + percentEscaper.escape(tweet.getText());
+        uriString += "status" + EQUAL + percentEscaper.escape(tweet.getText());
         uriString += AMPERSAND + "lat" + EQUAL + tweet.getCoordinates().getCoordinates().get(0);
+        uriString += AMPERSAND + "long" + EQUAL + tweet.getCoordinates().getCoordinates().get(1);
+
+        return uriString;
     }
 
-    private Tweet parseResponseBody(HttpResponse response, Integer expectedStatusCode) {
+    Tweet parseResponseBody(HttpResponse response, Integer expectedStatusCode) {
+    Tweet tweet = null;
 
+    // Check response status
+    int status = response.getStatusLine().getStatusCode();
+    if (status != expectedStatusCode) {
+        try {
+            System.out.println(EntityUtils.toString(response.getEntity()));
+        } catch (IOException e) {
+            System.out.println("Response has no entity");
+        }
+        throw new RuntimeException("Unexpected response status: " + status);
+    }
+
+    if(response.getEntity() == null) {
+        throw new RuntimeException("Empty response body");
+    }
+
+    // Convert response to str
+    String jsonStr;
+    try {
+        jsonStr = EntityUtils.toString(response.getEntity());
+
+    } catch (IOException e){
+        throw new RuntimeException("Failed to convert entity to String", e);
+    }
+
+    //Deser JSON string to Tweet Object
+        try {
+        tweet = JsonParser.toObjectFromJson(jsonStr, Tweet.class);
+        } catch (IOException e) {
+        throw new RuntimeException("Unable to convert JSON str to Object ", e);
+        }
+
+    return tweet;
     }
 
 }
