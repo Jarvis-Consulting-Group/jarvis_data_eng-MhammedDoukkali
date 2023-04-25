@@ -1,6 +1,6 @@
 # Mhammed Doukkali . Jarvis Consulting
 
-As a recent graduate from Concordia University, I bring a strong technical foundation to my five years of experience in the banking industry. My excellent track record in collaborating with team members, coupled with my ability to proactively address the needs of both customers and the organization, has honed my communication and problem-solving skills. My passion for software engineering began while working on a project to improve the online banking application. Intrigued by the power of programming to create and build solutions, I decided to enroll in an 'Introduction to Programming' course. Quickly, I found programming to be highly accessible and was thrilled to see the immediate results of my work in just a few lines of code. Currently, as an Applications and Data Engineer at Jarvis, I have honed my proficiency in various technologies such as Java, Linux, and Docker. I have demonstrated my ability to work in a fast-paced environment and deliver high-quality solutions. I am eager to leverage my skills and knowledge to contribute to your team's succes.
+As a recent graduate from Concordia University, I bring a strong technical foundation to my five years of experience in the banking industry. My excellent track record in collaborating with team members, coupled with my ability to proactively address the needs of both customers and the organization, has honed my communication and problem-solving skills. My passion for software engineering began while working on a project to improve the online banking application. Intrigued by the power of programming to create and build solutions, I decided to enroll in an 'Introduction to Programming' course. Quickly, I found programming to be highly accessible and was thrilled to see the immediate results of my work in just a few lines of code. Currently, as an Applications and Data Engineer at Jarvis, I have sharpened my proficiency in various technologies such as Java, Linux, and Docker. I have demonstrated my ability to work in a fast-paced environment and deliver high-quality solutions. I am eager to leverage my skills and knowledge to contribute to your team's success.
 
 ## Skills
 
@@ -15,7 +15,13 @@ As a recent graduate from Concordia University, I bring a strong technical found
 Project source code: [https://github.com/Jarvis-Consulting-Group/jarvis_data_eng-MhammedDoukkali/](https://github.com/Jarvis-Consulting-Group/jarvis_data_eng-MhammedDoukkali/)
 
 
-**Cluster Monitor** [[GitHub](https://github.com/Jarvis-Consulting-Group/jarvis_data_eng-MhammedDoukkali//tree/masterhttps://github.com/Jarvis-Consulting-Group/jarvis_data_eng-MhammedDoukkali/linux_sql)]: Implemented a monitoring agent in Bash that records the hardware specifications and usage of host machines over time and saves the data to a Postgres database running in a Docker container. The testing process involved using a CentOS 7 virtual machine on the Google Cloud Platform, and I manually tested each script to confirm that it meets its specifications.
+**Cluster Monitor** [[GitHub](https://github.com/Jarvis-Consulting-Group/jarvis_data_eng-MhammedDoukkali//tree/masterhttps://github.com/Jarvis-Consulting-Group/jarvis_data_eng-MhammedDoukkali/linux_sql)]: Implemented a monitoring agent in Bash that records the hardware specifications and usage of host machines over time and saves the data to a Postgres database running in a Docker container. The testing process involved using a CentOS 7 virtual machine on the Google Cloud Platform, and each script was manually tested to confirm that output expectations were met.
+
+**Core Java Apps** [[GitHub](https://github.com/Jarvis-Consulting-Group/jarvis_data_eng-MhammedDoukkali//tree/masterhttps://github.com/Jarvis-Consulting-Group/jarvis_data_eng-MhammedDoukkali/tree/master/core_java)]:
+      
+  - Twitter App: Designed a Twitter application that follows the MVC (Model-View-Controller) architecture, enabling users to execute CRUD operations via REST API. To build the application, I utilized various libraries such as Twitter API, HTTP client, OAuth authorization, and JSON serialization. During the development process, I conducted integration tests on all Java files using JUnit. Additionally, I employed the Mockito framework to test classes with dependencies, leveraging the ability to mock those dependencies.
+  - JDBC App: Programmed a straightforward application that establishes a link between a Java program and a relational database management system (RDBMS) to access data. To enable create, read, update, and delete (CRUD) operations, I utilized the DAO (data access object) design patterns.
+  - Grep App: Developed a Java program that imitates the grep command line function. The program performs a recursive search for a given pattern within a specified root directory and writes the matching lines to an output file. To efficiently list and filter files under the root directory while reducing memory usage, I utilized the Lambda and Stream API.
 
 
 ## Highlighted Projects
@@ -36,12 +42,12 @@ Project source code: [https://github.com/Jarvis-Consulting-Group/jarvis_data_eng
 ## Education
 **Concordia University (2022)**, Diploma Web Development, Computer Science
 
-**Mohammed V Souissi University (2008-2012)**, Bachelor's degree Business Administration, Management Science
+**Mohammed V Souissi University (2008-2012)**, Bachelor's Degree Business Administration, Management Science
 
 
 ## Miscellaneous
-- Udacity Machine Learning (2019)
-- Winner
-- Basketball player
-- Competitive gaming
-- Volunteer, ABC Food bank: Ut enim ad minim veniam
+- Linkedin Advanced Java Development 2023
+- Running
+- Percussion
+- Guitare
+- Volunteer Guignolée Dr Julien
