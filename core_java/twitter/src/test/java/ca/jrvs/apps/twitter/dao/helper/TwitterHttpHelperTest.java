@@ -25,13 +25,13 @@ public class TwitterHttpHelperTest {
     }
     @Test
     public void httpPost() throws Exception{
-        HttpResponse response = twitterHttpHelper.httpPost(new URI("https://api.publicapis.org/entries"));
+        HttpResponse response = twitterHttpHelper.httpPost(new URI("https://api.twitter.com/1.1/statuses/destroy/240854986559455234.json"));
         System.out.println(EntityUtils.toString(response.getEntity()));
     }
 
     @Test
     public void httpGet() throws Exception{
-        HttpResponse response = twitterHttpHelper.httpGet(new URI("https://api.publicapis.org/entries"));
+        HttpResponse response = twitterHttpHelper.httpGet(new URI("https://api.twitter.com/1.1/statuses/show.json?id=210462857140252672"));
         System.out.println(EntityUtils.toString(response.getEntity()));
     }
 }

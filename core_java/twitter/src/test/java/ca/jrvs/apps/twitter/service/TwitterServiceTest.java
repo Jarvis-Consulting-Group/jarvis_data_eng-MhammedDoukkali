@@ -1,40 +1,26 @@
 package ca.jrvs.apps.twitter.service;
 
-import ca.jrvs.apps.twitter.dao.CrdDao;
 import ca.jrvs.apps.twitter.model.Tweet;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.junit.Test;
 
-import java.util.List;
+import static org.junit.Assert.*;
 
-public class TwitterService implements Service {
+public class TwitterServiceTest {
 
-    private CrdDao dao;
 
-    @Autowired
-    public TwitterService(CrdDao dao) { this.dao = dao; }
-
-    @Override
-    public Tweet postTweet(Tweet tweet) {
+    @Test
+    public void postTweet(Tweet tweet) {
+    // tester if the tweet has a business logic which is
+        // 140 length and lat and lon respecting the convention
 
         validatePostTweet(tweet);
 
-        return (Tweet) dao.create(tweet);
+
+
     }
-
-    @Override
-    public Tweet showTweet(String id, String[] fields) {
-        return null;
-    }
-
-    @Override
-    public List<Tweet> deleteTweets(String[] ids) {
-        return null;
-    }
-
-
     private void validatePostTweet(Tweet tweet) {
         final int MAX_CHARS = 140;
-        
+
         if(tweet.getText().length() > MAX_CHARS) {
             throw new IllegalArgumentException("Tweet text exceeds" + MAX_CHARS + "characters.");
         }
@@ -48,5 +34,13 @@ public class TwitterService implements Service {
         if(lon < -180 || lon > 180) {
             throw new IllegalArgumentException("Longitude out of range (-180 to 180).");
         }
+    }
+
+    @Test
+    public void showTweet() {
+    }
+
+    @Test
+    public void deleteTweets() {
     }
 }

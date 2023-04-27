@@ -4,7 +4,6 @@ import ca.jrvs.apps.twitter.dao.helper.HttpHelper;
 import ca.jrvs.apps.twitter.example.JsonParser;
 import ca.jrvs.apps.twitter.model.Coordinates;
 import ca.jrvs.apps.twitter.model.Tweet;
-import com.github.tomakehurst.wiremock.WireMockServer;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

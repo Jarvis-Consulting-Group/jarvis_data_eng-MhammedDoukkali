@@ -44,7 +44,7 @@ public class TwitterDao implements CrdDao<Tweet, String> {
             URI uri = new URI(uriString);
             //Execute HTTP request
             HttpResponse response = httpHelper.httpPost(uri);
-            //Validate response and deser response to Tweet object
+            //Validate response and deserialization response to Tweet object
             return parseResponseBody(response, HTTP_OK);
         } catch (URISyntaxException e) {
             throw new IllegalArgumentException("Invalid tweet input", e);
@@ -53,17 +53,31 @@ public class TwitterDao implements CrdDao<Tweet, String> {
     }
 
     @Override
-    public Tweet findById(String s) {
-
-        return null;
+    public Tweet findById(String tweetById) {
+        String uriStr = API_BASE_URI + SHOW_PATH + QUERY_SYM + "id" + EQUAL + tweetById;
+        URI uri = getCreateUri(uriStr);
+        HttpResponse response = httpHelper.httpGet(uri);
+        return parseResponseBody(response, HTTP_OK);
     }
 
     @Override
-    public Tweet deleteById(String s) {
-
-        return null;
+    public Tweet deleteById(String tweetById) {
+        String deleteTweet = API_BASE_URI + DELETE_PATH + tweetById + ".json";
+        URI uri = getCreateUri(deleteTweet);
+        HttpResponse response = httpHelper.httpPost(uri);
+        return parseResponseBody(response, HTTP_OK);
     }
 
+    private URI getCreateUri(String s) {
+        URI uri;
+        try {
+            uri = new URI(s);
+        } catch (URISyntaxException e) {
+            throw new IllegalArgumentException("Invalid uri string", e);
+        }
+
+        return uri;
+    }
     private String getCreateUri(Tweet tweet) {
     String uriString = API_BASE_URI + POST_PATH + QUERY_SYM;
 
