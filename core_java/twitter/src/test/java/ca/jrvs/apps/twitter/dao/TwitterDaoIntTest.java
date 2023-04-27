@@ -34,7 +34,7 @@ public class TwitterDaoIntTest {
     @Test
     public void create() {
         String hashTag = "#abc";
-        String text = "@someone sometext" + hashTag + " " +System.currentTimeMillis();
+        String text = "@garyvee sometext" + hashTag + " " +System.currentTimeMillis();
         Double lat = 1d;
         Double lon =-1d;
         Tweet postTweet = new Tweet();
@@ -57,9 +57,21 @@ public class TwitterDaoIntTest {
 
     @Test
     public void findById() {
+        // test the if the uri sent with the id
+        String TEST_TWEET_ID= "https://api.twitter.com/1.1/statuses/show.json?id=210462857140252672";
+        Tweet tweet = dao.findById(TEST_TWEET_ID);
+
+        assertNotNull(tweet);
+        assertEquals(TEST_TWEET_ID, tweet.getId());
+
     }
 
     @Test
     public void deleteById() {
+        String TEST_DELETE_TWEET = "https://api.twitter.com/1.1/statuses/destroy/240854986559455234.json";
+        Tweet tweet = dao.deleteById(TEST_DELETE_TWEET);
+        assertNotNull(tweet);
+
+        assertEquals(TEST_DELETE_TWEET, tweet.getText());
     }
 }
