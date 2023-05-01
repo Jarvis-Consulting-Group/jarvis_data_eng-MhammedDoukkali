@@ -3,9 +3,7 @@ package ca.jrvs.apps.twitter.service;
 import ca.jrvs.apps.twitter.model.Tweet;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
-public class TwitterServiceTest {
+public class TwitterServiceIntTest {
 
 
     @Test
@@ -14,8 +12,6 @@ public class TwitterServiceTest {
         // 140 length and lat and lon respecting the convention
 
         validatePostTweet(tweet);
-
-
 
     }
     private void validatePostTweet(Tweet tweet) {
