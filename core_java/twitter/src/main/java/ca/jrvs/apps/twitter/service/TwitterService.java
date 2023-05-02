@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.ArrayList;
 import java.util.List;
 
+@org.springframework.stereotype.Service
 public class TwitterService implements Service {
 
     private CrdDao dao;
@@ -16,13 +17,15 @@ public class TwitterService implements Service {
 
     @Override
     public Tweet postTweet(Tweet tweet) {
-
         validatePostTweet(tweet);
+
+//        if(dao == null) {
+//            throw new NullPointerException("DAO is null");
+//        }
 
         return (Tweet) dao.create(tweet);
     }
 
-    @Override
     public Tweet showTweet(String id, String[] fields) {
 
         Tweet getTheTweet = (Tweet) dao.findById(id);

@@ -30,7 +30,7 @@ public class Tweet {
     @JsonPropertyOrder("id")
     private Long id;
     @JsonPropertyOrder("id_str")
-    private Long id_str;
+    private String id_str;
     @JsonPropertyOrder("text")
     private String text;
     @JsonPropertyOrder(" entities")
@@ -64,11 +64,11 @@ public class Tweet {
         this.id = id;
     }
 
-    public Long getId_str() {
+    public String getId_str() {
         return id_str;
     }
 
-    public void setId_str(Long id_str) {
+    public void setId_str(String id_str) {
         this.id_str = id_str;
     }
 
