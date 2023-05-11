@@ -1,6 +1,7 @@
 package ca.jrvs.apps.twitter.controller;
 
 import ca.jrvs.apps.twitter.dao.CrdDao;
+import ca.jrvs.apps.twitter.example.JsonParser;
 import ca.jrvs.apps.twitter.model.Tweet;
 import ca.jrvs.apps.twitter.service.Service;
 import ca.jrvs.apps.twitter.util.TweetUtil;
@@ -28,14 +29,14 @@ public class TwitterController implements Controller {
         String tweet_text = args[1];
         String coord = args[2];
         String[] coordArray = coord.split(COORD_SEP);
-        Double lon = null;
-        Double lat = null;
+
         if (coordArray.length != 2 || StringUtils.isEmpty(tweet_text)) {
             throw new IllegalArgumentException(
                     "Invalid location format\nUSAGE: TwitterCLIApp post \"tweet_text\" \"latitude:longitude\""
             );
         }
-
+        Double lon = null;
+        Double lat = null;
             try {
                 lat = Double.parseDouble(coordArray[0]);
                 lon = Double.parseDouble(coordArray[1]);
@@ -46,7 +47,9 @@ public class TwitterController implements Controller {
             }
 
         Tweet newTweet = TweetUtil.builtTweet(tweet_text, lon, lat);
-        return service.postTweet(newTweet);
+
+
+            return service.postTweet(newTweet);
     }
 
     @Override

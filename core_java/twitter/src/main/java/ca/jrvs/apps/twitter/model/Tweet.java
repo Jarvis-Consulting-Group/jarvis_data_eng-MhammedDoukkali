@@ -1,12 +1,15 @@
 package ca.jrvs.apps.twitter.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 import javax.annotation.Generated;
 
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonIgnoreProperties(ignoreUnknown = true)
 @JsonPropertyOrder({
         "created_at",
         "id",
@@ -25,27 +28,27 @@ import javax.annotation.Generated;
 
 public class Tweet {
 
-    @JsonPropertyOrder("created_at")
+    @JsonProperty("created_at")
     private String created_at;
-    @JsonPropertyOrder("id")
+    @JsonProperty("id")
     private Long id;
-    @JsonPropertyOrder("id_str")
+    @JsonProperty("id_str")
     private String id_str;
-    @JsonPropertyOrder("text")
+    @JsonProperty("text")
     private String text;
-    @JsonPropertyOrder(" entities")
+    @JsonProperty(" entities")
     private Entities entities;
-    @JsonPropertyOrder("hashtags")
+    @JsonProperty("hashtags")
     private Hashtag hashtag;
-    @JsonPropertyOrder("user_mentions")
+    @JsonProperty("user_mentions")
     private UserMention userMention;
-    @JsonPropertyOrder("coordinates")
+    @JsonProperty("coordinates")
     private Coordinates coordinates;
-    @JsonPropertyOrder("retweet_count")
+    @JsonProperty("retweet_count")
     private String retweet_count;
-    @JsonPropertyOrder("favorite_count")
+    @JsonProperty("favorite_count")
     private String favorite_count;
-    @JsonPropertyOrder("retweeted")
+    @JsonProperty("retweeted")
     private String retweeted;
 
     public String getCreated_at() {
