@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: ca.jrvs.apps.twitter.service.TwitterServiceIntTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.023 s <<< FAILURE! - in ca.jrvs.apps.twitter.service.TwitterServiceIntTest
+showTweet(ca.jrvs.apps.twitter.service.TwitterServiceIntTest)  Time elapsed: 0.004 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "ca.jrvs.apps.twitter.dao.CrdDao.findById(Object)" because "this.dao" is null
+	at ca.jrvs.apps.twitter.service.TwitterServiceIntTest.showTweet(TwitterServiceIntTest.java:63)
+
+deleteTweets(ca.jrvs.apps.twitter.service.TwitterServiceIntTest)  Time elapsed: 0.004 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "ca.jrvs.apps.twitter.dao.CrdDao.findById(Object)" because "this.mockDao" is null
+	at ca.jrvs.apps.twitter.service.TwitterServiceIntTest.deleteTweets(TwitterServiceIntTest.java:88)
+
+postTweet(ca.jrvs.apps.twitter.service.TwitterServiceIntTest)  Time elapsed: 0.005 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "ca.jrvs.apps.twitter.dao.CrdDao.create(Object)" because "this.dao" is null
+	at ca.jrvs.apps.twitter.service.TwitterServiceIntTest.postTweet(TwitterServiceIntTest.java:48)
+

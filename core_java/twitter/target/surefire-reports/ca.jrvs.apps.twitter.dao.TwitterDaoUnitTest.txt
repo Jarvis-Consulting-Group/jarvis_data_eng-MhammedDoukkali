@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: ca.jrvs.apps.twitter.dao.TwitterDaoUnitTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 1.152 s <<< FAILURE! - in ca.jrvs.apps.twitter.dao.TwitterDaoUnitTest
+delete(ca.jrvs.apps.twitter.dao.TwitterDaoUnitTest)  Time elapsed: 0.339 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.apache.http.HttpResponse.getStatusLine()" because "response" is null
+	at ca.jrvs.apps.twitter.dao.TwitterDaoUnitTest.delete(TwitterDaoUnitTest.java:111)
+
+postTweet(ca.jrvs.apps.twitter.dao.TwitterDaoUnitTest)  Time elapsed: 0.005 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "String.length()" because "s" is null
+	at ca.jrvs.apps.twitter.dao.TwitterDaoUnitTest.postTweet(TwitterDaoUnitTest.java:101)
+

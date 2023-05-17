@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: ca.jrvs.apps.twitter.service.TwitterServiceUnitTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.062 s <<< FAILURE! - in ca.jrvs.apps.twitter.service.TwitterServiceUnitTest
+postTweet(ca.jrvs.apps.twitter.service.TwitterServiceUnitTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.util.List.get(int)" because the return value of "ca.jrvs.apps.twitter.model.Coordinates.getCoordinates()" is null
+	at ca.jrvs.apps.twitter.service.TwitterServiceUnitTest.postTweet(TwitterServiceUnitTest.java:49)
+
