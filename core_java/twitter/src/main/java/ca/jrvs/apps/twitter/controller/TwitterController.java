@@ -1,7 +1,6 @@
 package ca.jrvs.apps.twitter.controller;
 
-import ca.jrvs.apps.twitter.dao.CrdDao;
-import ca.jrvs.apps.twitter.example.JsonParser;
+
 import ca.jrvs.apps.twitter.model.Tweet;
 import ca.jrvs.apps.twitter.service.Service;
 import ca.jrvs.apps.twitter.util.TweetUtil;

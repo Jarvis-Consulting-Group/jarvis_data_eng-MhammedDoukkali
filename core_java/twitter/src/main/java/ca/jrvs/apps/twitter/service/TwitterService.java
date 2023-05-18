@@ -19,10 +19,6 @@ public class TwitterService implements Service {
     public Tweet postTweet(Tweet tweet) {
         validatePostTweet(tweet);
 
-//        if(dao == null) {
-//            throw new NullPointerException("DAO is null");
-//        }
-
         return (Tweet) dao.create(tweet);
     }
 
