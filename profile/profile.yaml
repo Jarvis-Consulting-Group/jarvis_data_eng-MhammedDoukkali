@@ -1,0 +1,113 @@
+# Preferred name (Characters only)
+name: "Mhammed Doukkali"
+# Your GitHub repo root URL
+github_repo_root_url: https://github.com/Jarvis-Consulting-Group/jarvis_data_eng-MhammedDoukkali/
+
+# Introduce yourself, your academic and professional background.
+# What excites you about the software industry and your passion. At least 80 words
+summary: As dedicated software developer with a good foundation in both web development and cloud computing, I bring a strong technical foundation to my five years of experience in the banking industry. My excellent track record in collaborating with team members, coupled with my ability to proactively address the needs of both customers and the organization, has honed my communication and problem-solving skills. My passion for software engineering began while working on a project to improve the online banking application. Intrigued by the power of programming to create and build solutions, I decided to enroll in an 'Introduction to Programming' course. Quickly, I found programming to be highly accessible and was thrilled to see the immediate results of my work in just a few lines of code. Currently, as an Applications and Data Engineer at Jarvis, I have sharpened my proficiency in various technologies such as Java, Linux, and Docker. I have demonstrated my ability to work in a fast-paced environment and deliver high-quality solutions. I am eager to leverage my skills and knowledge to contribute to your team's success.
+
+# Group your skills by level.
+# Your skills can be anything software related (e.g. language, frameworks, methodologies, software, etc.).
+skills:
+  # At least 5 skills
+  proficient:
+    - Java
+    - Linux/Bash
+    - RDBMS/SQL
+    - Agile/Scrum
+    - Git
+  # At least 5 skills
+  competent:
+    - Javascript
+    - ReactJS
+    - HTML/CSS
+    - MongoDB
+    - REST API
+  # At least 5 skills
+  familiar:
+    - Docker
+    - Terraform
+    - Android Studio
+    - NodeJS
+    - Spring
+
+# List of Jarvis projects
+jarvis_projects:
+  - name: "Cluster Monitor"
+    git_url: "https://github.com/Jarvis-Consulting-Group/jarvis_data_eng-MhammedDoukkali/linux_sql"
+    # The project description allows hiring managers to understand your project and technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
+    # The project description must start with an action verb (https://bit.ly/3guO98u)
+    description: Implemented a monitoring agent in Bash that records the hardware specifications and usage of host machines over time and saves the data to a Postgres database running in a Docker container. The testing process involved using a CentOS 7 virtual machine on the Google Cloud Platform, and each script was manually tested to confirm that output expectations were met.
+  - name: "Core Java Apps"
+    git_url: "https://github.com/Jarvis-Consulting-Group/jarvis_data_eng-MhammedDoukkali/tree/master/core_java"
+    description:
+      - "Twitter App: Designed a Twitter application that follows the MVC (Model-View-Controller) architecture, enabling users to execute CRUD operations via REST API. To build the application, I utilized various libraries such as Twitter API, HTTP client, OAuth authorization, and JSON serialization. During the development process, I conducted integration tests on all Java files using JUnit. Additionally, I employed the Mockito framework to test classes with dependencies, leveraging the ability to mock those dependencies."
+      - "JDBC App: Programmed a straightforward application that establishes a link between a Java program and a relational database management system (RDBMS) to access data. To enable create, read, update, and delete (CRUD) operations, I utilized the DAO (data access object) design patterns."
+      - "Grep App: Developed a Java program that imitates the grep command line function. The program performs a recursive search for a given pattern within a specified root directory and writes the matching lines to an output file. To efficiently list and filter files under the root directory while reducing memory usage, I utilized the Lambda and Stream API."
+        
+# List of personal or academic projects
+# Feel free to add more projects
+highlighted_projects:
+    #project name
+  - name: "ReachOut"
+    #URL is optional
+    #git_url: "https://github.com/jarviscanada/jarvis_profile_builder"
+    # The project description must start with an action verb (https://bit.ly/3guO98u)
+    description: Developed full-stack web application that provides comprehensive information on both physical and mental health. Users can access a wide range of health-related articles on various topics, as well as track their physical activity and mental health using external REST APIs. Additionally, we have implemented a map feature focused on Montreal that allows users to find healthcare professionals and facilities for both physical and mental health. The application uses cutting-edge technologies such as JavaScript, React.js, Node.js, Express.js, HTTP, and REST APIs, and we store user data securely in a MongoDB database.To ensure a seamless and user-friendly experience, we have utilized popular UI frameworks such as Material UI and Styled Components. Our code is hosted on GitHub, making it easy for developers to contribute and collaborate on the project.
+#  - name: "Machine Learning"
+#    git_url:
+#    description: Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.
+
+#List of professional experience
+#The job description allows hiring managers to understand your job and the technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
+#The description must be more than 25 words. If your experience is not software related, please focus on soft skills and achievements (e.g. team collaboration, problem-solving, improvements, communication).
+professional_experience:
+  #Write your Jarvis role as a professional experience rather than training.
+  - title: "Software Developer"
+    company: "Jarvis"
+    duration: "2023-present"
+    # The project description must start with an action verb (https://bit.ly/3guO98u)
+    description: "Collaborated with a team using Agile/Scrum methodology to develop various back-end and data projects involving technologies and tools such as Linux, SQL, Java, and Docker."
+  - title: "Account Officer"
+    company: "National Bank of Canada"
+    duration: "2021-2022"
+    description: "I had a multifaceted role that involved a broad spectrum of duties. More specifically, I was responsible for meticulously analyzing loan applications to ensure they were in line with relevant policies and regulations, and scrutinizing legal documentation to confirm their accuracy and completeness. Another crucial aspect of my role was to maintain rigorous standards in the disbursement process to ensure quality outcomes for our clients."
+  - title: "Technical Advisor"
+    company: "National Bank of Canada"
+    duration: "2018-2021"
+    description: "As part of the transformation effort to enhance the customer experience, I played a key role in supporting the bank's entrepreneurial clients. Specifically, I was responsible for assisting these customers with their transactional requirements, managing their MasterCard accounts, and guiding them in the use of our electronic solutions."
+  - title: "Banking Specialist"
+    company: "National Bank of Canada"
+    duration: "2017-2018"
+    description: "My responsibilities involved analyzing the specific requirements of clients and providing them with expert guidance on various banking services such as opening and managing accounts, obtaining credit cards, and securing loans."
+
+#List of edcuation
+education: 
+  - school_name: "Concordia University"
+    duration: "2022"
+    degree: "Diploma Web Development"
+    department: "Computer Science"
+    #optional
+    awards_achievements:
+  - school_name: "Mohammed V Souissi University"
+    duration: "2008-2012"
+    degree: "Bachelor's Degree Business Administration"
+    department: "Management Science"
+    awards_achievements:
+
+#Optional section
+others:
+    #category
+  - title: "Certificates"
+    #list of items
+    bullets:
+      - "AWS Certified Developer" 
+  - title: "Sport"
+    bullets:
+      - "Running"
+  - title: "Other" 
+    bullets:
+      - "Percussion"
+      - "Guitare"  
+      - "Volunteer Guignolée Dr Julien"  
