@@ -4,11 +4,11 @@ As dedicated software developer with a good foundation in both web development a
 
 ## Skills
 
-**Proficient:** Java, Linux/Bash, RDBMS/SQL, Agile/Scrum, Git
+**Proficient:** Java, Linux/Bash, PostgreSQL, AWS, Git
 
 **Competent:** Javascript, ReactJS, HTML/CSS, MongoDB, REST API
 
-**Familiar:** Docker, Terraform, Android Studio, NodeJS, Spring
+**Familiar:** Docker, Terraform, Jira, NodeJS, Spring
 
 ## Jarvis Projects
 
@@ -30,13 +30,15 @@ Project source code: [https://github.com/Jarvis-Consulting-Group/jarvis_data_eng
 
 ## Professional Experiences
 
-**Software Developer, Jarvis (2023-present)**: Collaborated with a team using Agile/Scrum methodology to develop various back-end and data projects involving technologies and tools such as Linux, SQL, Java, and Docker.
+**Software Developer, National Bank of Canada (2023)**:  - Orchestrated the deployment of a wide range of AWS resources, utilizing services such as EC2, S3, DynamoDB, and EventBridge through Terraform configurations. - I implemented Vault with Spring Boot APIs for information storage. - Implemented secure data handling utilizing Vault with Spring Boot APIs for sensitive information storage. - Employed Maven for managing dependencies and builds, Docker for application containerization, ensuring smooth deployment. - Incorporated comprehensive project-specific documentation for development tasks, enhancing project clarity and facilitating seamless collaboration.
 
-**Account Officer, National Bank of Canada (2021-2022)**: I had a multifaceted role that involved a broad spectrum of duties. More specifically, I was responsible for meticulously analyzing loan applications to ensure they were in line with relevant policies and regulations, and scrutinizing legal documentation to confirm their accuracy and completeness. Another crucial aspect of my role was to maintain rigorous standards in the disbursement process to ensure quality outcomes for our clients.
+**Software Developer, Jarvis (2023-present)**:  - Developed various back-end and data projects involving technologies and tools such as Linux, SQL, Java and Docker. - Analyzed business requirements and proposed solutions, designed, coded and tested software according to detailed business requirements. - Created applications that follow the MVC (Model-View-Controller) architecture, allowing users to execute CRUD operations via the REST API. - Collaborated with a team using Agile/Scrum methodology.
 
-**Technical Advisor, National Bank of Canada (2018-2021)**: As part of the transformation effort to enhance the customer experience, I played a key role in supporting the bank's entrepreneurial clients. Specifically, I was responsible for assisting these customers with their transactional requirements, managing their MasterCard accounts, and guiding them in the use of our electronic solutions.
+**Account Officer, National Bank of Canada (2021-2022)**:  - Analyzed loan applications to ensure compliance with relevant policies and regulations. - Scrutinized legal documents to confirm accuracy and completeness. - Maintained rigorous standards in the disbursement process to ensure quality results for our customers. - Collected, compiled and verified the accuracy of data to ensure portfolio management.
 
-**Banking Specialist, National Bank of Canada (2017-2018)**: My responsibilities involved analyzing the specific requirements of clients and providing them with expert guidance on various banking services such as opening and managing accounts, obtaining credit cards, and securing loans.
+**Technical Advisor, National Bank of Canada (2018-2021)**:  - Researched, developed and maintained the tools and techniques that enable us to access and retrieve data. - Contributed to innovative projects and participated in the creation of new tools. - Collaborated with other teams and developers on the implementation of new functionalities on the online banking application. - Supported the bank's entrepreneurial customers in their transaction needs.
+
+**Banking Specialist, National Bank of Canada (2017-2018)**:  - Verified and controlled money transfers in complex systems to respond to inquiries. - Guided users in managing electronic solutions. - Provided technical support to our customers.
 
 
 ## Education
@@ -47,7 +49,7 @@ Project source code: [https://github.com/Jarvis-Consulting-Group/jarvis_data_eng
 
 ## Miscellaneous
 - AWS Certified Developer
-- Running
-- Percussion
-- Guitare
+- Engaging in endurance running
+- Enthusiastic percussionist with a passion for rhythm and beat
+- Guitare player for the past two decades
 - Volunteer Guignolée Dr Julien
