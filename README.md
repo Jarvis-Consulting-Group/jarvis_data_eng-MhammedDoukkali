@@ -4,11 +4,11 @@ As dedicated software developer with a good foundation in both web development a
 
 ## Skills
 
-**Proficient:** Java, Linux/Bash, RDBMS/SQL, Agile/Scrum, Git
+**Proficient:** Java, Linux/Bash, PostgreSQL, AWS, Git
 
 **Competent:** Javascript, ReactJS, HTML/CSS, MongoDB, REST API
 
-**Familiar:** Docker, Terraform, Android Studio, NodeJS, Spring
+**Familiar:** Docker, Terraform, Jira, NodeJS, Spring
 
 ## Jarvis Projects
 
@@ -30,7 +30,9 @@ Project source code: [https://github.com/Jarvis-Consulting-Group/jarvis_data_eng
 
 ## Professional Experiences
 
-**Software Developer, Jarvis (2023-present)**: Collaborated with a team using Agile/Scrum methodology to develop various back-end and data projects involving technologies and tools such as Linux, SQL, Java, and Docker.
+**Software Developer, National Bank of Canada (2023)**: Orchestrated the deployment of a wide range of AWS resources, utilizing services such as EC2, S3, DynamoDB, and EventBridge through Terraform configurations. To ensure secure handling of sensitive data, I implemented Vault with Spring Boot APIs for information storage. Managing dependencies and builds efficiently, I utilized Maven, while Docker was employed for application containerization, ensuring smooth deployment processes. Additionally, I contributed to project clarity and seamless collaboration by incorporating thorough project-specific documentation for development tasks.
+
+**Software Developer, Jarvis (2023-present)**: Collaborated with a team using Agile/Scrum methodology to develop various back-end and data projects involving technologies and tools such as Linux, SQL, Java, and Docker. I analyzed business requirements, proposed solutions, designed, coded, and tested software according to detailed business requirements while creating applications that adhere to the MVC (Model-View-Controller) architecture. This approach enables users to execute CRUD operations seamlessly via the REST API.
 
 **Account Officer, National Bank of Canada (2021-2022)**: I had a multifaceted role that involved a broad spectrum of duties. More specifically, I was responsible for meticulously analyzing loan applications to ensure they were in line with relevant policies and regulations, and scrutinizing legal documentation to confirm their accuracy and completeness. Another crucial aspect of my role was to maintain rigorous standards in the disbursement process to ensure quality outcomes for our clients.
 
@@ -47,7 +49,7 @@ Project source code: [https://github.com/Jarvis-Consulting-Group/jarvis_data_eng
 
 ## Miscellaneous
 - AWS Certified Developer
-- Running
-- Percussion
-- Guitare
+- Engaging in endurance running
+- Enthusiastic percussionist with a passion for rhythm and beat
+- Guitare player for the past two decades
 - Volunteer Guignolée Dr Julien

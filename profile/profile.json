@@ -48,14 +48,14 @@
     },
     {
       "bullets": [
-        "Running"
+        "Engaging in endurance running"
       ],
       "title": "Sport"
     },
     {
       "bullets": [
-        "Percussion",
-        "Guitare",
+        "Enthusiastic percussionist with a passion for rhythm and beat",
+        "Guitare player for the past two decades",
         "Volunteer Guignolée Dr Julien"
       ],
       "title": "Other"
@@ -63,8 +63,14 @@
   ],
   "professional_experience": [
     {
+      "company": "National Bank of Canada",
+      "description": "Orchestrated the deployment of a wide range of AWS resources, utilizing services such as EC2, S3, DynamoDB, and EventBridge through Terraform configurations. To ensure secure handling of sensitive data, I implemented Vault with Spring Boot APIs for information storage. Managing dependencies and builds efficiently, I utilized Maven, while Docker was employed for application containerization, ensuring smooth deployment processes. Additionally, I contributed to project clarity and seamless collaboration by incorporating thorough project-specific documentation for development tasks.",
+      "duration": "2023",
+      "title": "Software Developer"
+    },
+    {
       "company": "Jarvis",
-      "description": "Collaborated with a team using Agile/Scrum methodology to develop various back-end and data projects involving technologies and tools such as Linux, SQL, Java, and Docker.",
+      "description": "Collaborated with a team using Agile/Scrum methodology to develop various back-end and data projects involving technologies and tools such as Linux, SQL, Java, and Docker. I analyzed business requirements, proposed solutions, designed, coded, and tested software according to detailed business requirements while creating applications that adhere to the MVC (Model-View-Controller) architecture. This approach enables users to execute CRUD operations seamlessly via the REST API.",
       "duration": "2023-present",
       "title": "Software Developer"
     },
@@ -98,15 +104,15 @@
     "familiar": [
       "Docker",
       "Terraform",
-      "Android Studio",
+      "Jira",
       "NodeJS",
       "Spring"
     ],
     "proficient": [
       "Java",
       "Linux/Bash",
-      "RDBMS/SQL",
-      "Agile/Scrum",
+      "PostgreSQL",
+      "AWS",
       "Git"
     ]
   },

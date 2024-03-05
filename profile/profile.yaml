@@ -14,8 +14,8 @@ skills:
   proficient:
     - Java
     - Linux/Bash
-    - RDBMS/SQL
-    - Agile/Scrum
+    - PostgreSQL
+    - AWS
     - Git
   # At least 5 skills
   competent:
@@ -28,7 +28,7 @@ skills:
   familiar:
     - Docker
     - Terraform
-    - Android Studio
+    - Jira
     - NodeJS
     - Spring
 
@@ -65,10 +65,15 @@ highlighted_projects:
 professional_experience:
   #Write your Jarvis role as a professional experience rather than training.
   - title: "Software Developer"
+    company: "National Bank of Canada"
+    duration: "2023"
+    # The project description must start with an action verb (https://bit.ly/3guO98u)
+    description: "Orchestrated the deployment of a wide range of AWS resources, utilizing services such as EC2, S3, DynamoDB, and EventBridge through Terraform configurations. To ensure secure handling of sensitive data, I implemented Vault with Spring Boot APIs for information storage. Managing dependencies and builds efficiently, I utilized Maven, while Docker was employed for application containerization, ensuring smooth deployment processes. Additionally, I contributed to project clarity and seamless collaboration by incorporating thorough project-specific documentation for development tasks."
+  - title: "Software Developer"
     company: "Jarvis"
     duration: "2023-present"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: "Collaborated with a team using Agile/Scrum methodology to develop various back-end and data projects involving technologies and tools such as Linux, SQL, Java, and Docker."
+    description: "Collaborated with a team using Agile/Scrum methodology to develop various back-end and data projects involving technologies and tools such as Linux, SQL, Java, and Docker. I analyzed business requirements, proposed solutions, designed, coded, and tested software according to detailed business requirements while creating applications that adhere to the MVC (Model-View-Controller) architecture. This approach enables users to execute CRUD operations seamlessly via the REST API."
   - title: "Account Officer"
     company: "National Bank of Canada"
     duration: "2021-2022"
@@ -105,9 +110,9 @@ others:
       - "AWS Certified Developer" 
   - title: "Sport"
     bullets:
-      - "Running"
+      - "Engaging in endurance running"
   - title: "Other" 
     bullets:
-      - "Percussion"
-      - "Guitare"  
+      - "Enthusiastic percussionist with a passion for rhythm and beat"
+      - "Guitare player for the past two decades"  
       - "Volunteer Guignolée Dr Julien"  
