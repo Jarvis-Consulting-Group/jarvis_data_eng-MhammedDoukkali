@@ -68,24 +68,45 @@ professional_experience:
     company: "National Bank of Canada"
     duration: "2023"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: "Orchestrated the deployment of a wide range of AWS resources, utilizing services such as EC2, S3, DynamoDB, and EventBridge through Terraform configurations. To ensure secure handling of sensitive data, I implemented Vault with Spring Boot APIs for information storage. Managing dependencies and builds efficiently, I utilized Maven, while Docker was employed for application containerization, ensuring smooth deployment processes. Additionally, I contributed to project clarity and seamless collaboration by incorporating thorough project-specific documentation for development tasks."
+    description: "
+    - Orchestrated the deployment of a wide range of AWS resources, utilizing services such as EC2, S3, DynamoDB, and EventBridge through Terraform configurations. 
+    - I implemented Vault with Spring Boot APIs for information storage. 
+    - Implemented secure data handling utilizing Vault with Spring Boot APIs for sensitive information storage.
+    - Employed Maven for managing dependencies and builds, Docker for application containerization, ensuring smooth deployment.
+    - Incorporated comprehensive project-specific documentation for development tasks, enhancing project clarity and
+      facilitating seamless collaboration."
   - title: "Software Developer"
     company: "Jarvis"
     duration: "2023-present"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: "Collaborated with a team using Agile/Scrum methodology to develop various back-end and data projects involving technologies and tools such as Linux, SQL, Java, and Docker. I analyzed business requirements, proposed solutions, designed, coded, and tested software according to detailed business requirements while creating applications that adhere to the MVC (Model-View-Controller) architecture. This approach enables users to execute CRUD operations seamlessly via the REST API."
+    description: "
+    - Developed various back-end and data projects involving technologies and tools such as Linux, SQL, Java and Docker.
+    - Analyzed business requirements and proposed solutions, designed, coded and tested software according to detailed business requirements.
+    - Created applications that follow the MVC (Model-View-Controller) architecture, allowing users to execute CRUD operations via the REST API.
+    - Collaborated with a team using Agile/Scrum methodology."
   - title: "Account Officer"
     company: "National Bank of Canada"
     duration: "2021-2022"
-    description: "I had a multifaceted role that involved a broad spectrum of duties. More specifically, I was responsible for meticulously analyzing loan applications to ensure they were in line with relevant policies and regulations, and scrutinizing legal documentation to confirm their accuracy and completeness. Another crucial aspect of my role was to maintain rigorous standards in the disbursement process to ensure quality outcomes for our clients."
+    description: "
+    - Analyzed loan applications to ensure compliance with relevant policies and regulations.
+    - Scrutinized legal documents to confirm accuracy and completeness.
+    - Maintained rigorous standards in the disbursement process to ensure quality results for our customers.
+    - Collected, compiled and verified the accuracy of data to ensure portfolio management."
   - title: "Technical Advisor"
     company: "National Bank of Canada"
     duration: "2018-2021"
-    description: "As part of the transformation effort to enhance the customer experience, I played a key role in supporting the bank's entrepreneurial clients. Specifically, I was responsible for assisting these customers with their transactional requirements, managing their MasterCard accounts, and guiding them in the use of our electronic solutions."
+    description: "
+    - Researched, developed and maintained the tools and techniques that enable us to access and retrieve data.
+    - Contributed to innovative projects and participated in the creation of new tools.
+    - Collaborated with other teams and developers on the implementation of new functionalities on the online banking application.
+    - Supported the bank's entrepreneurial customers in their transaction needs."
   - title: "Banking Specialist"
     company: "National Bank of Canada"
     duration: "2017-2018"
-    description: "My responsibilities involved analyzing the specific requirements of clients and providing them with expert guidance on various banking services such as opening and managing accounts, obtaining credit cards, and securing loans."
+    description: "
+    - Verified and controlled money transfers in complex systems to respond to inquiries.
+    - Guided users in managing electronic solutions.
+    - Provided technical support to our customers."
 
 #List of edcuation
 education: 
