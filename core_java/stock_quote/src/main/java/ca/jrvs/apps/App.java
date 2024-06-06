@@ -1,0 +1,66 @@
+package ca.jrvs.apps;
+
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.io.IOException;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+
+
+public class App 
+{
+    private static final Logger logger = LoggerFactory.getLogger(App.class);
+
+    private static final String API_KEY = "01c7b11687mshacb1e381461609ep1e8bc5jsn4c627dd7f5c0";
+    private static final String API_HOST = "alpha-vantage.p.rapidapi.com";
+
+    private static final String BASE_URL = "https://alpha-vantage.p.rapidapi.com/query";
+    public static void main( String[] args )
+    {
+        String function = "GLOBAL_QUOTE";
+        String symbol = "MSFT";
+        String url = String.format("%s?function=%s&symbol=%s&datatype=json", BASE_URL, function, symbol);
+
+        HttpRequest request = HttpRequest.newBuilder()
+                        .uri(URI.create(url))
+                            .header("X-RapidAPI-key", API_KEY)
+                                .header("X-RapidAPI-host", API_HOST)
+                                        .method("GET", HttpRequest.BodyPublishers.noBody())
+                                                .build();
+
+        try {
+            HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
+            System.out.println("Response Body: " + response.body());
+            parseAndPrintResponse(response.body());
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (JsonMappingException e) {
+            e.printStackTrace();
+        }catch (JsonProcessingException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private static void parseAndPrintResponse(String jsonResponse) throws  IOException{
+        ObjectMapper objectMapper = new ObjectMapper();
+        JsonNode rootNode = objectMapper.readTree(jsonResponse);
+
+        JsonNode globalQuoteNode = rootNode.path("Global Quote");
+        if (globalQuoteNode.isMissingNode()) {
+            System.out.println("Error: Unable to find global quote data in  the response.");
+            return;
+        }
+
+    }
+}
