@@ -1,6 +1,10 @@
 package ca.jrvs.apps;
 
 
+import ca.jrvs.apps.http.HttpClientHelper;
+import ca.jrvs.apps.http.OkHttpHelper;
+import ca.jrvs.apps.http.QuoteFetcher;
+import ca.jrvs.apps.models.QuoteResponse;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -26,29 +30,19 @@ public class App
     public static void main( String[] args )
     {
         String function = "GLOBAL_QUOTE";
-        String symbol = "MSFT";
+        String symbol = "IBM";
         String url = String.format("%s?function=%s&symbol=%s&datatype=json", BASE_URL, function, symbol);
 
-        HttpRequest request = HttpRequest.newBuilder()
-                        .uri(URI.create(url))
-                            .header("X-RapidAPI-key", API_KEY)
-                                .header("X-RapidAPI-host", API_HOST)
-                                        .method("GET", HttpRequest.BodyPublishers.noBody())
-                                                .build();
+//        QuoteFetcher quoteFetcher = new QuoteFetcher(new HttpClientHelper());
+         QuoteFetcher quoteFetcher = new QuoteFetcher(new OkHttpHelper());
 
         try {
-            HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
-            System.out.println("Response Body: " + response.body());
-            parseAndPrintResponse(response.body());
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (JsonMappingException e) {
-            e.printStackTrace();
-        }catch (JsonProcessingException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+            String response = quoteFetcher.fetchQuoteData(url, API_KEY, API_HOST);
+            logger.info("Response Body: " + response);
+            parseAndPrintResponse(response);
+        } catch(Exception e) {
+            logger.error("Error fetching quote data", e);
+    }
 
     }
 
@@ -62,5 +56,7 @@ public class App
             return;
         }
 
+        QuoteResponse quoteResponse = objectMapper.treeToValue(globalQuoteNode, QuoteResponse.class);
+        System.out.println(quoteResponse);
     }
 }
