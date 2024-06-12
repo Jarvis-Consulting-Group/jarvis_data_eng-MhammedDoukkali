@@ -1,12 +1,19 @@
 package ca.jrvs.apps.models;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+//import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class GlobalQuote {
-    @JsonProperty("01. symbol")
+public class Quote {
+//    @JsonProperty("01. symbol")
     private String symbol;
-    @JsonProperty("05. price")
+//    @JsonProperty("05. price")
     private String price;
+
+    public Quote() {}
+
+    public Quote(String symbol, String price) {
+        this.symbol = symbol;
+        this.price = price;
+    }
 
     public String getSymbol() {
         return symbol;
@@ -26,7 +33,7 @@ public class GlobalQuote {
 
     @Override
     public String toString() {
-        return "GlobalQuote{" +
+        return "Quote{" +
                 "symbol='" + symbol + '\'' +
                 ", price='" + price + '\'' +
                 '}';

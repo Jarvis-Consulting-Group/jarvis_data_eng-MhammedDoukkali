@@ -4,20 +4,20 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class QuoteResponse {
     @JsonProperty("Global Quote")
-    private GlobalQuote globalQuote;
+    private Quote quote;
 
-    public GlobalQuote getGlobalQuote() {
-        return globalQuote;
+    public Quote getGlobalQuote() {
+        return quote;
     }
 
-    public void setGlobalQuote(GlobalQuote globalQuote) {
-        this.globalQuote = globalQuote;
+    public void setGlobalQuote(Quote quote) {
+        this.quote = quote;
     }
 
     @Override
     public String toString() {
         return "QuoteResponse{" +
-                "globalQuote=" + globalQuote +
+                "globalQuote=" + quote +
                 '}';
     }
 }
