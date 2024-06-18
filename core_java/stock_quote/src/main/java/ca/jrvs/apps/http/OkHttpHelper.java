@@ -1,10 +1,12 @@
 package ca.jrvs.apps.http;
 
+import ca.jrvs.apps.models.Quote;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
 import java.io.IOException;
+import java.util.Optional;
 
 public class OkHttpHelper implements HttpHelper {
 
@@ -15,7 +17,7 @@ public class OkHttpHelper implements HttpHelper {
     }
 
     @Override
-    public String fetchQuoteData (String url, String apiKey, String apiHost) throws IOException {
+    public String fetchQuoteData(String url, String apiKey, String apiHost) throws IOException {
         Request request = new Request.Builder()
                 .url(url)
                 .addHeader("X-RapidAPI-key", apiKey)
@@ -25,9 +27,10 @@ public class OkHttpHelper implements HttpHelper {
 
         try (Response response = client.newCall(request).execute()) {
             if (!response.isSuccessful()) {
-                throw new IOException("Unexpected response code: " +response.code());
+                throw new IOException("Unexpected response code: " + response.code());
             }
             return response.body().string();
         }
     }
+
 }
