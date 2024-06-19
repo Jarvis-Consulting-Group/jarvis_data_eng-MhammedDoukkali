@@ -25,9 +25,9 @@ public class PositionService {
      * @return The position in our database after processing the buy
      */
     
-    public Position buy(String ticker, int numberOfShares, double price) {
+    public Position buy(String ticker, int numberOfShares, double valuePaid) {
         // fetch existing or create a new one
-        Position position = dao.findById(ticker).orElse(new Position(ticker, 0, 0.0));
+        Position position = dao.findById(ticker).orElse(new Position(ticker, numberOfShares, valuePaid));
         
         // update the position with the new buy
         position.setNumOfShares(position.getNumOfShares() + numberOfShares);
