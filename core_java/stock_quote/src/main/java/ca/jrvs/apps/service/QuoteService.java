@@ -14,15 +14,17 @@ public class QuoteService {
 
     private static final Logger logger = LoggerFactory.getLogger(QuoteService.class);
 
-    private final QuoteDao dao;
+    private final QuoteDao quoteDao;
     private final QuoteHttpHelper httpHelper;
 
-    public QuoteService(QuoteDao dao, QuoteHttpHelper httpHelper) {
-        this.dao = dao;
+    public QuoteService(QuoteDao quoteDao, QuoteHttpHelper httpHelper) {
+        this.quoteDao = quoteDao;
         this.httpHelper = httpHelper;
     }
 
-/**
+
+
+    /**
  * Fetches latest quote data from endpoint
  *
  * @param ticker Ticker symbol for the stock
@@ -36,7 +38,7 @@ public class QuoteService {
 
             // If quote data is present, save it to the database
             if (quote.isPresent()) {
-                dao.save(quote.get());
+                quoteDao.save(quote.get());
             }
             return quote;
         } catch (Exception e) {

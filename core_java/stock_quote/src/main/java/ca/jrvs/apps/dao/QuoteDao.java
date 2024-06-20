@@ -5,6 +5,7 @@ import ca.jrvs.apps.models.Quote;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
@@ -38,28 +39,55 @@ public class QuoteDao implements CrudDao<Quote, String>{
     }
 
     @Override
-    public Optional<Quote> findById(String id) throws IllegalArgumentException {
-        if (id == null) {
-            throw new IllegalArgumentException("ID must not be null");
+    public Optional<Quote> findById(String ticker) throws IllegalArgumentException {
+//
+        String sql = "SELECT ticker, price FROM quotes WHERE ticker = ?";
+        try (Connection conn = DatabaseUtil.getConnection();
+        PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, ticker);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                return Optional.of(new Quote(rs.getString("ticker"), rs.getString("price")));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-        return Optional.ofNullable(quoteDatabase.get(id));
+        return Optional.empty();
     }
 
     @Override
     public Iterable<Quote> findAll() {
-        return quoteDatabase.values();
+        String sql = "SELECT * FROM quotes";
+        try ( Connection conn = DatabaseUtil.getConnection();
+              PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return null;
     }
 
     @Override
-    public void deleteById(String id) throws IllegalArgumentException {
-        if (id == null) {
-            throw new IllegalArgumentException("ID must not be null");
+    public void deleteById(String ticker) throws IllegalArgumentException {
+        String sql = "DELETE FROM quotes WHERE ticker = ?";
+        try (Connection conn = DatabaseUtil.getConnection();
+            PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, ticker);
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-        quoteDatabase.remove(id);
     }
 
     @Override
     public void deleteAll() {
-        quoteDatabase.clear();
+        String sql = "DELETE From quotes";
+        try ( Connection conn = DatabaseUtil.getConnection();
+            PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }
