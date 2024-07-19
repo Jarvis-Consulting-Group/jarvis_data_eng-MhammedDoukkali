@@ -1,12 +1,12 @@
 # Mhammed Doukkali . Jarvis Consulting
 
-As dedicated software developer with a good foundation in both web development and cloud computing, I bring a strong technical foundation to my five years of experience in the banking industry. My excellent track record in collaborating with team members, coupled with my ability to proactively address the needs of both customers and the organization, has honed my communication and problem-solving skills. My passion for software engineering began while working on a project to improve the online banking application. Intrigued by the power of programming to create and build solutions, I decided to enroll in an 'Introduction to Programming' course. Quickly, I found programming to be highly accessible and was thrilled to see the immediate results of my work in just a few lines of code. Currently, as an Applications and Data Engineer at Jarvis, I have sharpened my proficiency in various technologies such as Java, Linux, and Docker. I have demonstrated my ability to work in a fast-paced environment and deliver high-quality solutions. I am eager to leverage my skills and knowledge to contribute to your team's success.
+As a dedicated software developer with a solid foundation in both web development and cloud computing, I bring a strong technical background to my five years of experience in the banking industry. My skill set includes expertise in COBOL, JCL, ISPF, DB2, and mainframe technologies, which complements my proficiency in Java, Linux, and Docker. My excellent track record in collaborating with team members, coupled with my ability to proactively address the needs of both customers and the organization, has honed my communication and problem-solving skills. My passion for software engineering began while working on a project to improve the online banking application. Intrigued by the power of programming to create and build solutions, I decided to enroll in an 'Introduction to Programming' course. Quickly, I found programming to be highly accessible and was thrilled to see the immediate results of my work in just a few lines of code. Currently, as an Applications and Data Engineer at Jarvis, I have sharpened my proficiency in various technologies and demonstrated my ability to work in a fast-paced environment to deliver high-quality solutions. I am eager to leverage my skills and knowledge to contribute to your team's success.
 
 ## Skills
 
-**Proficient:** Java, Linux/Bash, PostgreSQL, AWS, Git
+**Proficient:** Java, Linux/Bash, PostgreSQL, COBOL, Git
 
-**Competent:** Javascript, ReactJS, HTML/CSS, MongoDB, REST API
+**Competent:** IMS, JCL, HTML/CSS, DB2, REST API
 
 **Familiar:** Docker, Terraform, Jira, NodeJS, Spring
 
