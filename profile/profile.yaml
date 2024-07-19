@@ -15,7 +15,7 @@ skills:
     - Linux/Bash
     - PostgreSQL
     - COBOL
-    - Git
+    - Docker
   # At least 5 skills
   competent:
     - IMS
@@ -25,7 +25,7 @@ skills:
     - REST API
   # At least 5 skills
   familiar:
-    - Docker
+    - React
     - Terraform
     - Jira
     - NodeJS
@@ -49,11 +49,11 @@ jarvis_projects:
 # Feel free to add more projects
 highlighted_projects:
     #project name
-  - name: "ReachOut"
+  - name: "Student Data Processing and Reporting System"
     #URL is optional
     #git_url: "https://github.com/jarviscanada/jarvis_profile_builder"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: Developed full-stack web application that provides comprehensive information on both physical and mental health. Users can access a wide range of health-related articles on various topics, as well as track their physical activity and mental health using external REST APIs. Additionally, we have implemented a map feature focused on Montreal that allows users to find healthcare professionals and facilities for both physical and mental health. The application uses cutting-edge technologies such as JavaScript, React.js, Node.js, Express.js, HTTP, and REST APIs, and we store user data securely in a MongoDB database.To ensure a seamless and user-friendly experience, we have utilized popular UI frameworks such as Material UI and Styled Components. Our code is hosted on GitHub, making it easy for developers to contribute and collaborate on the project.
+    description: Developed a robust student data processing and reporting system using COBOL, VSAM, and DB2 on a mainframe platform. The system efficiently manages student records, processes data, and generates comprehensive reports. This project aimed to streamline the management of student information, ensuring data integrity and providing users with detailed and accurate reports.
 #  - name: "Machine Learning"
 #    git_url:
 #    description: Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.
@@ -63,6 +63,15 @@ highlighted_projects:
 #The description must be more than 25 words. If your experience is not software related, please focus on soft skills and achievements (e.g. team collaboration, problem-solving, improvements, communication).
 professional_experience:
   #Write your Jarvis role as a professional experience rather than training.
+  - title: "Software Developer"
+    company: "Jarvis"
+    duration: "2023-present"
+    # The project description must start with an action verb (https://bit.ly/3guO98u)
+    description: "
+    - Developed various back-end and data projects involving technologies and tools such as Linux, SQL, Java and Docker.
+    - Analyzed business requirements and proposed solutions, designed, coded and tested software according to detailed business requirements.
+    - Created applications that follow the MVC (Model-View-Controller) architecture, allowing users to execute CRUD operations via the REST API.
+    - Collaborated with a team using Agile/Scrum methodology."
   - title: "Software Developer"
     company: "National Bank of Canada"
     duration: "2023"
@@ -74,15 +83,6 @@ professional_experience:
     - Employed Maven for managing dependencies and builds, Docker for application containerization, ensuring smooth deployment.
     - Incorporated comprehensive project-specific documentation for development tasks, enhancing project clarity and
       facilitating seamless collaboration."
-  - title: "Software Developer"
-    company: "Jarvis"
-    duration: "2023-present"
-    # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: "
-    - Developed various back-end and data projects involving technologies and tools such as Linux, SQL, Java and Docker.
-    - Analyzed business requirements and proposed solutions, designed, coded and tested software according to detailed business requirements.
-    - Created applications that follow the MVC (Model-View-Controller) architecture, allowing users to execute CRUD operations via the REST API.
-    - Collaborated with a team using Agile/Scrum methodology."
   - title: "Account Officer"
     company: "National Bank of Canada"
     duration: "2021-2022"
