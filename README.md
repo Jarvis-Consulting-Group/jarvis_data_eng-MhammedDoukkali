@@ -1,14 +1,14 @@
 # Mhammed Doukkali . Jarvis Consulting
 
-As dedicated software developer with a good foundation in both web development and cloud computing, I bring a strong technical foundation to my five years of experience in the banking industry. My excellent track record in collaborating with team members, coupled with my ability to proactively address the needs of both customers and the organization, has honed my communication and problem-solving skills. My passion for software engineering began while working on a project to improve the online banking application. Intrigued by the power of programming to create and build solutions, I decided to enroll in an 'Introduction to Programming' course. Quickly, I found programming to be highly accessible and was thrilled to see the immediate results of my work in just a few lines of code. Currently, as an Applications and Data Engineer at Jarvis, I have sharpened my proficiency in various technologies such as Java, Linux, and Docker. I have demonstrated my ability to work in a fast-paced environment and deliver high-quality solutions. I am eager to leverage my skills and knowledge to contribute to your team's success.
+As a dedicated software developer with a solid foundation in both web development and cloud computing, I bring a strong technical background to my five years of experience in the banking industry. My skill set includes expertise in COBOL, JCL, ISPF, DB2, and mainframe technologies, which complements my proficiency in Java, Linux, and Docker. My excellent track record in collaborating with team members, coupled with my ability to proactively address the needs of both customers and the organization, has honed my communication and problem-solving skills. My passion for software engineering began while working on a project to improve the online banking application. Intrigued by the power of programming to create and build solutions, I decided to enroll in an 'Introduction to Programming' course. Quickly, I found programming to be highly accessible and was thrilled to see the immediate results of my work in just a few lines of code. Currently, as an Applications and Data Engineer at Jarvis, I have sharpened my proficiency in various technologies and demonstrated my ability to work in a fast-paced environment to deliver high-quality solutions. I am eager to leverage my skills and knowledge to contribute to your team's success.
 
 ## Skills
 
-**Proficient:** Java, Linux/Bash, PostgreSQL, AWS, Git
+**Proficient:** Java, Linux/Bash, PostgreSQL, COBOL, Docker
 
-**Competent:** Javascript, ReactJS, HTML/CSS, MongoDB, REST API
+**Competent:** IMS, JCL, HTML/CSS, DB2, REST API
 
-**Familiar:** Docker, Terraform, Jira, NodeJS, Spring
+**Familiar:** React, Terraform, Jira, NodeJS, Spring
 
 ## Jarvis Projects
 
@@ -25,14 +25,14 @@ Project source code: [https://github.com/Jarvis-Consulting-Group/jarvis_data_eng
 
 
 ## Highlighted Projects
-**ReachOut**: Developed full-stack web application that provides comprehensive information on both physical and mental health. Users can access a wide range of health-related articles on various topics, as well as track their physical activity and mental health using external REST APIs. Additionally, we have implemented a map feature focused on Montreal that allows users to find healthcare professionals and facilities for both physical and mental health. The application uses cutting-edge technologies such as JavaScript, React.js, Node.js, Express.js, HTTP, and REST APIs, and we store user data securely in a MongoDB database.To ensure a seamless and user-friendly experience, we have utilized popular UI frameworks such as Material UI and Styled Components. Our code is hosted on GitHub, making it easy for developers to contribute and collaborate on the project.
+**Student Data Processing and Reporting System**: Developed a robust student data processing and reporting system using COBOL, VSAM, and DB2 on a mainframe platform. The system efficiently manages student records, processes data, and generates comprehensive reports. This project aimed to streamline the management of student information, ensuring data integrity and providing users with detailed and accurate reports. By integrating DB2, the project also enabled efficient database operations, allowing for seamless data querying and updates. The project significantly improved the administrative capabilities of the institution, leading to better decision-making and enhanced student data management.
 
 
 ## Professional Experiences
 
-**Software Developer, National Bank of Canada (2023)**:  - Orchestrated the deployment of a wide range of AWS resources, utilizing services such as EC2, S3, DynamoDB, and EventBridge through Terraform configurations. - I implemented Vault with Spring Boot APIs for information storage. - Implemented secure data handling utilizing Vault with Spring Boot APIs for sensitive information storage. - Employed Maven for managing dependencies and builds, Docker for application containerization, ensuring smooth deployment. - Incorporated comprehensive project-specific documentation for development tasks, enhancing project clarity and facilitating seamless collaboration.
-
 **Software Developer, Jarvis (2023-present)**:  - Developed various back-end and data projects involving technologies and tools such as Linux, SQL, Java and Docker. - Analyzed business requirements and proposed solutions, designed, coded and tested software according to detailed business requirements. - Created applications that follow the MVC (Model-View-Controller) architecture, allowing users to execute CRUD operations via the REST API. - Collaborated with a team using Agile/Scrum methodology.
+
+**Software Developer, National Bank of Canada (2023)**:  - Orchestrated the deployment of a wide range of AWS resources, utilizing services such as EC2, S3, DynamoDB, and EventBridge through Terraform configurations. - I implemented Vault with Spring Boot APIs for information storage. - Implemented secure data handling utilizing Vault with Spring Boot APIs for sensitive information storage. - Employed Maven for managing dependencies and builds, Docker for application containerization, ensuring smooth deployment. - Incorporated comprehensive project-specific documentation for development tasks, enhancing project clarity and facilitating seamless collaboration.
 
 **Account Officer, National Bank of Canada (2021-2022)**:  - Analyzed loan applications to ensure compliance with relevant policies and regulations. - Scrutinized legal documents to confirm accuracy and completeness. - Maintained rigorous standards in the disbursement process to ensure quality results for our customers. - Collected, compiled and verified the accuracy of data to ensure portfolio management.
 
