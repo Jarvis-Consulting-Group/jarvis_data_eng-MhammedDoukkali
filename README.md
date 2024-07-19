@@ -25,7 +25,7 @@ Project source code: [https://github.com/Jarvis-Consulting-Group/jarvis_data_eng
 
 
 ## Highlighted Projects
-**Student Data Processing and Reporting System**: Developed a robust student data processing and reporting system using COBOL, VSAM, and DB2 on a mainframe platform. The system efficiently manages student records, processes data, and generates comprehensive reports. This project aimed to streamline the management of student information, ensuring data integrity and providing users with detailed and accurate reports.
+**Student Data Processing and Reporting System**: Developed a robust student data processing and reporting system using COBOL, VSAM, and DB2 on a mainframe platform. The system efficiently manages student records, processes data, and generates comprehensive reports. This project aimed to streamline the management of student information, ensuring data integrity and providing users with detailed and accurate reports. By integrating DB2, the project also enabled efficient database operations, allowing for seamless data querying and updates. The project significantly improved the administrative capabilities of the institution, leading to better decision-making and enhanced student data management.
 
 
 ## Professional Experiences
